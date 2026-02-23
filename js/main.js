@@ -3,7 +3,7 @@
 // Import component modules
 import { initProgressBar } from './components/progressBar.js';
 import { initTypingEffect } from './components/typingEffect.js';
-import { initSkillCategoryTabs } from './components/skillsTab.js';
+import { initSkillCategoryTabs } from './components/skillCategories.js';
 
 // Import animations
 import { initSkillGraph } from './animations/skillGraph.js';
