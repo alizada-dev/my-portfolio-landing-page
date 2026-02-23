@@ -6,6 +6,7 @@
 /* Import components */
 @import "./component/progress-bar.css";
 @import "./component/button.css";
+@import "./component/cursor.css";
 /* @import "./components/skill-graph.css"; */
 
 /* Import base.css */
@@ -14,6 +15,8 @@
 
 /* Import sections */
 @import "./sections/hero.css";
+@import "./sections/contacts.css";
+@import "./sections/footer.css";
 
 
 

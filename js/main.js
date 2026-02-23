@@ -4,9 +4,12 @@
 import { initProgressBar } from './components/progressBar.js';
 import { initTypingEffect } from './components/typingEffect.js';
 import { initSkillCategoryTabs } from './components/skillCategories.js';
+import { initContactForm } from './components/contactForm.js';
 
 // Import animations
 import { initSkillGraph } from './animations/skillGraph.js';
+
+
 
 /**
  * Initialize on Document Ready
@@ -18,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initProgressBar();
     initTypingEffect();
     initSkillCategoryTabs();
+    initContactForm();
 
     initSkillGraph({
         canvasId: "skill-canvas",
@@ -85,4 +89,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     });
+
+    const yearEl = document.getElementById("current-year");
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+    }
 })

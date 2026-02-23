@@ -11,6 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
         rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9aa85e9d7c.js" crossorigin="anonymous"></script>
     <style>
         .section {
             padding: 42px 0;
@@ -19,6 +20,9 @@
 </head>
 
 <body>
+    <div class="inner-cursor"></div>
+    <div class="outer-cursor"></div>
+
     <canvas id="space-bg"></canvas>
 
     <nav class="side-nav">
@@ -93,6 +97,53 @@
                 </div>
             </div>
         </section>
+
+        <!-- contact section -->
+         <section id="contact" class="contact section">
+            <h2 class="section-title">Get in touch</h2>
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <div>
+                    <h3 class="description">
+                        I'm currently open to new opportunities. Whether you have a question or just want to say hello, I'll get back to you
+                        soon!
+                    </h3>
+                </div>
+                <div>
+                    <input type="hidden" name="access_key" value="725353ac-3960-42d7-992b-634d46cdb804">
+                    <input type="text" name="name" placeholder="Name" class="contact-inputs" required>
+                    <input type="email" name="email" placeholder="Email" class="contact-inputs" required>
+                </div>
+                <textarea name="message" placeholder="Your message" class="contact-inputs" required></textarea>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+         </section>
+
+         <!-- footer -->
+        <footer class="footer-section">
+            <div class="footer-container">
+        
+                <div class="footer-col footer-left">
+                    <p><i class="fa-solid fa-location-dot"></i> London, United Kingdom</p>
+                </div>
+        
+                <div class="footer-col footer-center">
+                    <p>© <span id="current-year"></span> Fida Ali Zada. All rights reserved.</p>
+                </div>
+        
+                <div class="footer-col footer-right">
+                    <a href="https://github.com/yourusername" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://twitter.com/yourusername" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </div>
+        
+            </div>
+        </footer>
     </main>
 
 
@@ -102,6 +153,32 @@
 
     <script type="module" src="./js/animations/particles.js"></script>
     <script type="module" src="js/main.js"></script>
+    
+
+    <script>
+        let innerCursor = document.querySelector(".inner-cursor");
+        let outerCursor = document.querySelector(".outer-cursor");
+
+        
+
+        document.addEventListener("mousemove", moveCursor)
+
+        function moveCursor(e) {
+            // Only initialize on desktop
+            if (window.innerWidth <= 768) return;
+
+            let x = e.clientX;
+            let y = e.clientY;
+
+            innerCursor.style.left = `${x}px`;
+            innerCursor.style.top = `${y}px`;
+            outerCursor.style.left = `${x}px`;
+            outerCursor.style.top = `${y}px`;
+
+        }
+
+
+    </script>
 
 
 </body>
