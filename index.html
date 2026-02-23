@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fida | Frontend Developer</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
+        rel="stylesheet">
+    <style>
+        .section {
+            padding: 42px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="space-bg"></canvas>
+
+    <nav class="side-nav">
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+    </nav>
+
+    <div class="progress-container">
+        <div class="progress-bar"></div>
+    </div>
+
+    <main>
+        <section class="hero section">
+            <div class="hero-content">
+                <div class="logo">
+                    <a href="#">
+                        <img src="./images/logo.png" alt="logo" class="logo-img">
+                    </a>
+                </div>
+                <h1 class="name">Fida Ali Zada</h1>
+                <h2 class="role">Frontend Developer</h2>
+                <div class="typing-container">
+                    <p class="typing-text">I build <span class="typing"></span></p>
+                </div>
+                <p class="bio">
+                    I build fast, accessible, and polished web experiences with modern UI and clean architecture.
+                </p>
+
+                <div class="available-status">
+                    <span class="status-text">Available for opportunities</span>
+                    <span class="status-indicator available"></span>
+                </div>
+
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-outline">Contact me</a>
+                </div>
+
+                <div class="scroll-indicator" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 5v14m0 0l-7-7m7 7l7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <span>Scroll to explore</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- skills section -->
+        <section id="skills" class="skills section">
+            <div class="skills-canvas-wrap">
+                <h2 class="section-title">Skills</h2>
+                <div class="skill-categories">
+                    <button class="skill-category active" data-category="all">All</button>
+                    <button class="skill-category" data-category="frontend">Frontend</button>
+                    <button class="skill-category" data-category="backend">Backend</button>
+                    <button class="skill-category" data-category="tools">Tools</button>
+                </div>
+                <canvas id="skill-canvas"></canvas>
+        
+                <div class="skill-details" aria-live="polite">
+                    <div class="skill-details-row">
+                        <div class="skill-name">Hover or drag skills to explore</div>
+                        <div class="skill-level">-</div>
+                    </div>
+                    <div class="skill-description">
+                        This interactive visualization shows my skills. Skills are connected based on their relationships.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+
+    <script type="module" src="./js/animations/particles.js"></script>
+    <script type="module" src="js/main.js"></script>
+
+
+</body>
+
+</html>

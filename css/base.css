@@ -1,0 +1,65 @@
+:root {
+    --bg: #ffffff;
+    --text: #0b1220;
+    --star: #2563eb;
+    /* blue for light mode */
+}
+
+html,
+body {
+    margin: 0;
+}
+
+html.dark {
+    --bg: #050816;
+    --text: #e5e7eb;
+    --star: #3b82f6;
+    /* blue for dark mode */
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Roboto", sans-serif;
+    /* cursor: none; */
+}
+
+/* keep your canvas behind */
+canvas#space-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+}
+
+
+.section-title {
+    text-align: center;
+    font-size: var(--font-size-5xl);
+    margin-bottom: var(--space-12);
+    position: relative;
+    z-index: var(--z-above);
+    font-family: var(--font-display);
+}
+
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    /* distance under text */
+    height: 3px;
+    width: 48px;
+    /* start hidden */
+    background: #3b82f6;
+    border-radius: 999px;
+    transform: translateX(-50%);
+    transition: width 0.28s cubic-bezier(.4, 0, .2, 1);
+    color: blue;
+}
