@@ -1,4 +1,9 @@
-// Skill category tabs -> filter graph
+// /js/components/skillCategories.js
+
+/**
+ * Skill Categories Functionality
+ * Handles filtering of skills based on category selection
+ */
 export function initSkillCategoryTabs() {
     const buttons = document.querySelectorAll(".skill-category");
     
