@@ -21,7 +21,13 @@ body {
     background: var(--bg);
     color: var(--text);
     font-family: "Roboto", sans-serif;
-    /* cursor: none; */
+    cursor: none;
+}
+
+@media (max-width: 768px) {
+    body {
+        cursor: auto;
+    }
 }
 
 /* keep your canvas behind */

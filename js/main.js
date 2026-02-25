@@ -5,6 +5,7 @@ import { initProgressBar } from './components/progressBar.js';
 import { initTypingEffect } from './components/typingEffect.js';
 import { initSkillCategoryTabs } from './components/skillCategories.js';
 import { initContactForm } from './components/contactForm.js';
+import { initScrollSpy } from './components/scrollSpy.js';
 
 // Import animations
 import { initSkillGraph } from './animations/skillGraph.js';
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initTypingEffect();
     initSkillCategoryTabs();
     initContactForm();
+    initScrollSpy();
 
     initSkillGraph({
         canvasId: "skill-canvas",
